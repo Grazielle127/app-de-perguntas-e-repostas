@@ -129,7 +129,7 @@ const Game = () => {
                             }
                             style={styles.buttonContainer}
                         >
-                            <Button title={opcao} onPress={() => resposta(opcao)} style={styles.button} />
+                            <Button style={styles.button} title={opcao} onPress={() => resposta(opcao)} />
                         </MotiView>
                     </View>
                 ))}

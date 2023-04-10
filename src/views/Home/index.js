@@ -4,7 +4,7 @@ import { View } from "react-native";
 // navegação
 import { useNavigation } from "@react-navigation/native";
 // componentes
-import { Container, Title, Espaco } from './styles';
+import { Container, Title, Subtitle, Espaco } from './styles';
 import Botao from '../../components/Botao';
 import Logo from '../../components/icons/Logo';
 
@@ -15,7 +15,8 @@ const Home = () => {
 
     return (
         <Container>
-            <Title>Teste os seus conhecimentos sobre os cuidados com seu cabelo</Title>
+            <Title>Baby Hair</Title>
+            <Subtitle>Teste os seus conhecimentos sobre os cuidados com seu cabelo</Subtitle>
             <Espaco>
                 <View>
                     <Logo />

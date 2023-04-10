@@ -7,13 +7,19 @@ export const Container = styled.View`
     background-color: #FFC1CC;
 `
 export const Title = styled.Text`
-    font-size: 32px;
+    font-size: 50px;
     color: #000;
     text-align: center;
     width: 90%;
     font-weight: bold;
     text-transform: uppercase;
     text-shadow: 5px 5px 5px #ccc;
+`
+
+export const Subtitle = styled.Text`
+    font-size: 28px;
+    text-align: center;
+    width: 90%;
 `
 
 export const Espaco = styled.View`
