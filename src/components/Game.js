@@ -65,6 +65,7 @@ const Game = () => {
     const [perguntaAtualIndex, setPerguntaAtualIndex] = useState(0);
     const [pontuacao, setPontuacao] = useState(0);
     const [som, setSom] = useState();
+    const [respostaIncorreta, setRespostaIncorreta] = useState(false);
 
     //implementando a SDK de audio
     async function tocarSomCorreto() {
@@ -96,8 +97,10 @@ const Game = () => {
         if (opcaoSelecionada === perguntaAtual.respostaCorreta) {
             setPontuacao(pontuacao + 1);
             tocarSomCorreto();
+            setRespostaIncorreta(false);
         } else {
             tocarSomErrado();
+            setRespostaIncorreta(true);
         }
         setPerguntaAtualIndex(perguntaAtualIndex + 1);
     }
@@ -111,9 +114,23 @@ const Game = () => {
 
                 {perguntaAtual.opcoes.map((opcao, index) => (
                     <View key={index} style={styles.espaco}>
-
-                        <Button title={opcao} onPress={() => resposta(opcao)} style={styles.button} />
-
+                        <MotiView
+                            animate={respostaIncorreta
+                                ?
+                                {
+                                    translateX: [-0.1, 0.1, 0], rotate: [-0.1, 0.1, 0],
+                                    transition: { type: 'timing', duration: 100 }
+                                }
+                                :
+                                {
+                                    scale: [1, 1.2, 1],
+                                    transition: { type: 'spring', stiffness: 500, damping: 30 }
+                                }
+                            }
+                            style={styles.buttonContainer}
+                        >
+                            <Button title={opcao} onPress={() => resposta(opcao)} style={styles.button} />
+                        </MotiView>
                     </View>
                 ))}
             </View>
