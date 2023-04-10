@@ -1,9 +1,14 @@
 import React from "react";
-import { Text } from "react-native";
+import { Container } from './styles';
+
+//componentes
+import Game from "../../components/Game";
 
 const Jogo = () => {
     return (
-        <Text>Jogo</Text>
+        <Container>
+            <Game />
+        </Container>
     )
 }
 
