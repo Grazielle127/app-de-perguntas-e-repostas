@@ -1,13 +1,12 @@
 # :woman: Baby Hair Quiz
 
 * Trabalho da disciplina de Mobile no curso de ADS da [Fatec Itu](https://fatecitu.edu.br/portal/cursos/analise-e-desenvolvimento-de-sistemas/)
-* App React-Native/Expo de **Jogo de Perguntas e Respostas** sobre cuidados e conhecimentos com o cabelo
-
----
+* App React-Native/Expo de um **Jogo de Perguntas e Respostas sobre cuidados e conhecimentos com o cabelo**
 
 ## :books: Informações Gerais
 - React [useState hook](https://reactjs.org/docs/hooks-state.html) utilizado para o controle da sequencia das perguntas, controle da pontuação, a seleção do sons das respostas e as animações das respostas.
 - React [useEffect hook](https://reactjs.org/docs/hooks-effect.html) utilizado para ativação do som das respostas.
+- Expo [SDK AV](https://docs.expo.dev/versions/latest/sdk/av/) - API para reprodução de mídia.
 
 ## :camera: Screenshots
 ![Home](./assets/screnshotHome.png)
